@@ -1,0 +1,98 @@
+.details {
+  position: absolute;
+  top: 0;
+  left: 9;
+}
+
+.notch {
+  background: red;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+}
+.notch.tr {
+  top: 3px;
+  right: 3px;
+}
+.notch.tl {
+  top: 3px;
+  left: 3px;
+}
+.notch.br {
+  bottom: 3px;
+  right: 3px;
+}
+.notch.bl {
+  bottom: 3px;
+  left: 3px;
+}
+
+.wrap {
+  width: 420px;
+}
+
+.guide {
+  background: url("https://assets.codepen.io/76888/FA15-Grid.svg");
+  width: 420px;
+  height: calc(60px * 9);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 420px;
+  height: calc(60px * 9);
+  margin: auto;
+}
+.grid .cell {
+  aspect-ratio: 1/1;
+  width: 60px;
+  height: 60px;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(100, 0, 100, 0.1);
+}
+.grid .cell.ink {
+  background: black;
+  position: relative;
+}
+.grid .cell.ink:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: white;
+  z-index: -1;
+}
+.grid .cell.paper {
+  background: white;
+  position: relative;
+}
+.grid .cell.paper:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: black;
+  z-index: -1;
+}
+
+.c1 {
+  border-top-left-radius: 30%;
+}
+
+.c2 {
+  border-top-right-radius: 30%;
+}
+
+.c3 {
+  border-bottom-right-radius: 30%;
+}
+
+.c4 {
+  border-bottom-left-radius: 30%;
+}
